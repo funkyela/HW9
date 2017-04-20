@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>font designer</title>
+  <meta charset='UTF-8'>
+  <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+  <link rel="stylesheet" type="text/css" href="font.css">
+</head>
+<body>
+
+<table>
+
+<tr>
+<td><canvas id=canvas width=600 height=400></td>
+<td width=50></td>
+<td valign=top>
+<big><b>
+<div class="chooseColor">
+<span class='pen'>color：</span>
+  <button class='red ' data-type='red'></button>
+  <button class='green' data-type='green'></button>
+
+  <button class='yellow' data-type='yellow'></button>
+    <button class='blue' data-type='blue'></button>
+  <button class='black light' data-type='black'></button>
+</div>
+
+<div class="chooseWidth">
+  <span class='pen'>width：</span><input type="range" min='0' max='20' step='0.1' value='1' id='linewidth'>
+</div>
+</b></big>
+</td>
+</tr>
+
+</table>
+
+<script type="text/javascript" src='jquery.min.js'></script>
+<script type="text/javascript" src='font.js'></script>
+<script type="text/javascript">
+  $(function(){
+    var hw = new HandWriting({
+      el:$('#canvas')[0]
+    });
+  })
+</script>
+</body>
+</html>
